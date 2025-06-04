@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="./Css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Galpãozinho</h1>
+    <nav>
+      <a href="Dashboard.html">Dashboard</a>
+      <a href="Cadastro.html">Cadastro</a>
+      <a href="estoque.html">Estoque</a>
+    </nav>
+  </header>
+
+  <main class="graficos">
+    <section class="grafico">
+      <h2 id="entrada-label">Entrada de Produtos</h2>
+      <canvas id="graficoEntrada" aria-labelledby="entrada-label"></canvas>
+    </section>
+
+    <section class="grafico">
+      <h2 id="saida-label">Saída de Produtos</h2>
+      <canvas id="graficoSaida" aria-labelledby="saida-label"></canvas>
+    </section>
+
+    <section class="grafico">
+      <h2>Distribuição do Estoque</h2>
+      <canvas id="graficoPizza"></canvas>
+    </section>
+  </main>
+
+  <button class="btn-relatorio" onclick="gerarRelatorioPDF()">Gerar Relatório em PDF</button>
+
+  <footer>
+    <p>&copy; 2025 Galpãozinho. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="./Js/script.js"></script>
+</body>
+</html>

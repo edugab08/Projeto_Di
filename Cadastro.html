@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Produtos</title>
+  <link rel="stylesheet" href="./Css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Cadastro de Produtos</h1>
+    <nav>
+      <a href="Dashboard.html">Dashboard</a>
+      <a href="Cadastro.html">Cadastro</a>
+      <a href="estoque.html">Estoque</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Adicionar Produto</h2>
+    <form id="form-produto">
+      <input type="text" id="nome" placeholder="Nome do Produto" required>
+      <input type="text" id="lote" placeholder="Lote" required>
+      <input type="number" id="quantidade" placeholder="Quantidade" required min="1">
+      <input type="number" id="valor" placeholder="Valor Unitário (R$)" step="0.01" required min="0">
+
+      <h3>Fornecedor</h3>
+      <input type="text" id="fornecedor" placeholder="Nome do Fornecedor" required>
+      <input type="text" id="cnpj" placeholder="CNPJ (somente números)" required pattern="\d{14}" title="CNPJ deve conter 14 números">
+
+      <label for="foto">Foto do Produto:</label>
+      <input type="file" id="foto" accept="image/*">
+
+      <div id="valor-total">
+        Valor Total: R$ <span id="total">0.00</span>
+      </div>
+
+      <button type="submit">Cadastrar Produto</button>
+    </form>
+
+    <div id="mensagem-sucesso" style="display: none; color: green; margin-top: 10px;">
+      Produto cadastrado com sucesso!
+    </div>
+
+    <section id="produtos-cadastrados">
+      <!-- Aqui serão inseridos os cards dinamicamente -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Galpãozinho. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/estoque.js"></script>
+</body>
+</html>

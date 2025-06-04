@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estoque Geral</title>
+  <link rel="stylesheet" href="./Css/style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Estoque Geral</h1>
+  <nav>
+    <a href="Dashboard.html">Dashboard</a>
+    <a href="Cadastro.html">Cadastro</a>
+    <a href="estoque.html">Estoque</a>
+  </nav>
+</header>
+
+<main>
+  <div id="estoque-geral" class="estoque-grid"></div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Galpãozinho. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Modal de Edição -->
+<div id="modal-editar" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titulo-modal">
+  <div class="modal-content">
+    <h2 id="titulo-modal">Editar Produto</h2>
+    <form id="form-editar-produto">
+      <label for="editar-nome">Nome:
+        <input type="text" id="editar-nome" required />
+      </label>
+
+      <label for="editar-lote">Lote:
+        <input type="text" id="editar-lote" required />
+      </label>
+
+      <label for="editar-quantidade">Quantidade:
+        <input type="number" id="editar-quantidade" min="1" required />
+      </label>
+
+      <label for="editar-valor">Valor Unitário:
+        <input type="number" id="editar-valor" step="0.01" min="0" required />
+      </label>
+
+      <label for="editar-fornecedor">Fornecedor:
+        <input type="text" id="editar-fornecedor" required />
+      </label>
+
+      <label for="editar-cnpj">CNPJ:
+        <input type="text" id="editar-cnpj" pattern="\d{14}" title="CNPJ deve conter 14 números" required />
+      </label>
+
+      <div class="botoes">
+        <button type="submit">Salvar</button>
+        <button type="button" onclick="fecharModal()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="./Js/estoqueGeral.js"></script>
+</body>
+</html>
+
