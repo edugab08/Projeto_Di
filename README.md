@@ -15,7 +15,7 @@ Chart.js
 
 jsPDF
 
-Utilizamos o Netlify, para hospedar a página - https://gestaoestoques.netlify.app/
+Utilizamos o Netlify, para hospedar a página - https://controleestoques.netlify.app/
 
 
 
